@@ -7,8 +7,10 @@ const express = require('express')
 const app = express()
 const port = 8080
 
+var url=process.env.REDIRECT_URL || 'https://www.google.com/'
+
 app.get('/', (req, res) => {
-   res.redirect('http://wavemaker.imapnext.com/');
+   res.redirect(url);
 })
 
 app.get('/sayehello', (req, res) => {
